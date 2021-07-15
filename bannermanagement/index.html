@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 1. Import Bootstrap from Official Bootstrap Site via CDN - https://getbootstrap.com/docs/5.0/getting-started/download/#cdn-via-jsdelivr -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <title>Banner Management</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="../dashboard.html">Paradox</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../video/video.html" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Video
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <button id="room1" class="btn btn-light btn-block"><a class="dropdown-item">Room 1</a></button>
+                                <button id="room2" class="btn btn-light btn-block"><a class="dropdown-item">Room 2</a></button>
+                                <a class="dropdown-item" href="../video/form.html" style="text-align: center;">Book Room</a>
+                              </div>
+                          </li>
+                        <li class="nav-item"><a class="nav-link" href="../chatapp/index.html">Chat</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Banner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  <section class="content">
+    <header>
+      <h2 class="main" id="banner-main">Banner Management</h2>
+      <div class="toggle"></div>
+    </header>
+
+    <!-- 14. Assign an id to image element -->
+    <image id="bedroom" src="img/0.jpg" width=500 height=500 style="z-index:-1"></image>
+
+    <div class="backdrop" style="z-index:-1"></div>
+    <div style="display:block">
+
+      <h4 class="text-white">Image</h4>
+        <!-- 15. Copy dropdwon select from bootstrap component - https://getbootstrap.com/docs/5.0/forms/select/#default -->
+        <!-- 16. Assign an id to the dropdown select -->
+        <select id="bedroomSelect" class="form-select" aria-label="Default select example">
+          <option value="img/1.jpg" selected>Living</option>
+          <option value="img/2.jpg">Scenery</option>
+          <option value="img/3.jpg">Sky</option>
+          <option value="img/4.jpg">Plane</option>    
+        </select>
+
+        <br>
+    
+        <!-- 17. Copy any button from bootstrap component - https://getbootstrap.com/docs/5.0/components/buttons/#examples -->
+        <!-- 18. Assign an id to the button and change the name of the button-->
+        <button type="button" id="btnApplyImageJquery" class="btn btn-primary">Change Banner</button>
+
+    </div>
+    
+  
+
+    <ul class="image">
+      <a href=""><img src="https://i.ibb.co/42J79PL/Instagram.png"></a>
+      <a href=""><img src="https://i.ibb.co/1m6vNCx/Bawang.png"></a>
+      <a href="#"><img src="https://i.ibb.co/KLBs6H5/Twitter.png"></a>
+      <a href="#"><img src="https://i.ibb.co/sRh8xmQ/Facebook.png"></a>
+      <a href="#"><img src="https://i.ibb.co/JKPY05b/Pinterest.png"></a>
+      <a href=""><img src="https://i.ibb.co/JyR3DmD/Email.png"></a>
+      <a href=""><img src="https://i.ibb.co/WvrvMtv/Whatsapp.png" alt=""></a>
+      </ul>
+  </section>
+
+
+      <!-- Using JQuery Library - https://code.jquery.com/jquery/ (ALL list of jquery package) -->
+      <!-- Import JQuery through CDN -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+      <script>
+        
+          // 23. Assign apply button DOM to a variable
+          var btnApplyElement = $('#btnApplyImageJquery');
+
+          // 24. Listen to click event
+          btnApplyElement.on('click' , function(){
+          // 25. Assign your choosen image into a variable
+          var choosenImage = $('#bedroomSelect').val();
+          // 26. Replace image with your choosen image
+          $('#bedroom').attr("src",choosenImage);
+        });
+
+      </script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+      
