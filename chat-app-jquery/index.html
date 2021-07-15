@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="../dashboard.html">Paradox</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../video/video.html" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Video
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <button id="room1" class="btn btn-light btn-block"><a class="dropdown-item">Room 1</a></button>
+                                <button id="room2" class="btn btn-light btn-block"><a class="dropdown-item">Room 2</a></button>
+                                <a class="dropdown-item" href="../video/form.html" style="text-align: center;">Book Room</a>
+                              </div>
+                          </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Chat</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../bannermanagement/index.html">Banner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-md-8 col-xl-6 chat">
+          <div class="card">
+            <div class="card-header msg_head">
+              <div class="d-flex bd-highlight">
+                <div class="img_cont">
+                  <img src="img/IMG_0062.JPG" class="rounded-circle user_img" />
+                  <span class="online_icon"></span>
+                </div>
+                <div class="user_info">
+                  <span>Chat with Maulana</span>
+                </div>
+                <!-- <div class="video_cam">
+									<span><i class="fas fa-video"></i></span>
+									<span><i class="fas fa-phone"></i></span>
+								</div> -->
+              </div>
+              <span id="action_menu_btn"
+                ><i class="fas fa-ellipsis-v"></i
+              ></span>
+              <div class="action_menu">
+                <ul>
+                  <li><i class="fas fa-user-circle"></i> View profile</li>
+                  <li><i class="fas fa-users"></i> Add to close friends</li>
+                  <li><i class="fas fa-plus"></i> Add to group</li>
+                  <li><i class="fas fa-ban"></i> Block</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body msg_card_body">
+              <!-- <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img src="img/IMG_0062.JPG"" class="rounded-circle
+                  user_img_msg">
+                </div>
+                <div class="msg_cotainer">
+                  Hi, how are you Audina?
+                  <span class="msg_time">8:40 AM, Today</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  Hi Maulana i am good tnx how about you?
+                  <span class="msg_time_send">8:55 AM, Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="img/IMG_0023.JPG"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img src="img/IMG_0062.JPG"" class="rounded-circle
+                  user_img_msg">
+                </div>
+                <div class="msg_cotainer">
+                  I am good too, thank you for your chat template
+                  <span class="msg_time">9:00 AM, Today</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  You are welcome
+                  <span class="msg_time_send">9:05 AM, Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="img/IMG_0023.JPG"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img src="img/IMG_0062.JPG"" class="rounded-circle
+                  user_img_msg">
+                </div>
+                <div class="msg_cotainer">
+                  I am looking for your next templates
+                  <span class="msg_time">9:07 AM, Today</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  Ok, thank you have a good day
+                  <span class="msg_time_send">9:10 AM, Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="img/IMG_0023.JPG"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img src="img/IMG_0062.JPG"" class="rounded-circle
+                  user_img_msg">
+                </div>
+                <div class="msg_cotainer">
+                  Bye, see you
+                  <span class="msg_time">9:12 AM, Today</span>
+                </div>
+              </div> -->
+            </div>
+            <div class="card-footer">
+              <div class="input-group">
+                <div class="input-group-append">
+                  <span class="input-group-text attach_btn">
+                  <label for="fusk">
+                    <i class="fas fa-paperclip"></i>
+                  </label>
+                </span>
+                  <input id="fusk" type="file" name="photo" style="display: none;">
+                </div>
+                <input
+                  name=""
+                  class="form-control type_msg"
+                  placeholder="Type your message..."
+                ></input>
+                <div class="input-group-append">
+                  <span class="input-group-text send_btn"
+                    ><i class="fas fa-location-arrow"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".send_btn").click(function () {
+          var message = $(".type_msg").val();
+          $(".type_msg").val("");
+          console.log(message);
+          var settings = {
+            url: "http://localhost:3002/message",
+            method: "POST",
+            timeout: 0,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            data: JSON.stringify({
+              text: message,
+              user: 2,
+            }),
+          };
+
+          $.ajax(settings).done(function (response) {
+            response = response[0];
+            console.log(response);
+            console.log(response.text);
+            console.log(response.created_at);
+            $(".msg_card_body").append(function () {
+            // alert(`print message ${message} `);
+
+            var template = `<div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  ${response.text}
+                  <span class="msg_time_send">${response.created_at.replace('T',' ').replace('.000Z','')}</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="img/IMG_0023.JPG"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>`;
+
+            $(this).append(template);
+          });
+          });
+          
+        });
+        $(".attach_btn").click(function () {});
+
+        var settings = {
+          url: "http://localhost:3002/message",
+          method: "GET",
+          timeout: 0,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: JSON.stringify({
+            text: "hello new message",
+            user: 2,
+          }),
+        };
+
+        $.ajax(settings).done(function (response) {
+          $(".user_info").append(`<p>${response.length} Messages</p>`)
+          // console.log(response.length)
+          for (var i in response) {
+            time = response[i].created_at.replace('T',' ').replace('.000Z','');
+            if (response[i].user == 2) {
+              console.log(response[i].text);
+
+              $(".msg_card_body").append(function () {
+                var templateUser2 = `<div class="d-flex justify-content-end mb-4">
+                    <div class="msg_cotainer_send">
+                      ${response[i].text}
+                      <span class="msg_time_send">${time}</span>
+                    </div>
+                    <div class="img_cont_msg">
+                      <img
+                        src="img/IMG_0023.JPG"
+                        class="rounded-circle user_img_msg"
+                      />
+                    </div>
+                  </div>`;
+                $(this).append(templateUser2);
+              });
+            } else if (response[i].user == 1) {
+              $(".msg_card_body").append(function () {
+                var templateUser1 = `
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img src="img/IMG_0062.JPG"" class="rounded-circle
+                  user_img_msg">
+                </div>
+                <div class="msg_cotainer">
+                  ${response[i].text}
+                  <span class="msg_time">${time}</span>
+                </div>`;
+                $(this).append(templateUser1);
+              });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
